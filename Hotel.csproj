@@ -123,12 +123,14 @@
     <Compile Include="Controllers\CamereController.cs" />
     <Compile Include="Controllers\ClientiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PrenotazioniController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Camere.cs" />
     <Compile Include="Models\Clienti.cs" />
     <Compile Include="Models\Connessione.cs" />
+    <Compile Include="Models\Prenotazioni.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -203,14 +205,13 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Clienti\_PartialViewClienti.cshtml" />
     <Content Include="Views\Clienti\AggiungiCliente.cshtml" />
     <Content Include="Views\Clienti\ModificaCliente.cshtml" />
     <Content Include="Views\Clienti\DettagliCliente.cshtml" />
     <Content Include="Views\Camere\AggiungiCamera.cshtml" />
+    <Content Include="Views\Prenotazioni\AggiungiPrenotazione.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

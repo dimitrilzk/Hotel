@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.Remoting;
 using System.Web;
+using System.Web.Mvc;
 using System.Web.Services.Description;
 using System.Web.UI.WebControls;
 
@@ -20,6 +21,26 @@ namespace Hotel.Models
         public string Citta { get; set; }
         public string Email { get; set; }
         public string Cellulare { get; set; }
+        public static List<SelectListItem> ListaDrpdwnClienti
+        {
+            get
+            {
+                List<SelectListItem> lista = new List<SelectListItem>();
+                SqlConnection con = Connessione.GetConnection();
+                con.Open();
+                SqlDataReader reader = Connessione.GetReader("select IdCliente, Nome, Cognome from clienti", con);
+                while (reader.Read())
+                {
+                    SelectListItem item = new SelectListItem
+                    {
+                        Text = $"{reader["Nome"].ToString()} {reader["Cognome"].ToString()}",
+                        Value = reader["IdCliente"].ToString()
+                    };
+                    lista.Add(item);
+                }
+                return lista;
+            }
+        }
         public static List<Clienti> GetClienti()
         {
             SqlConnection c = Connessione.GetConnection();
