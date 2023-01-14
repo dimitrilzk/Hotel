@@ -1,0 +1,48 @@
+﻿@model Hotel.Models.Clienti
+
+@{
+    ViewBag.Title = "DettagliCliente";
+}
+
+<h2>Dettagli di @Model.Nome @Model.Cognome:</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CodiceFiscale)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodiceFiscale)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Citta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Citta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cellulare)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cellulare)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Torna Indietro", "AggiungiCliente")
+</p>

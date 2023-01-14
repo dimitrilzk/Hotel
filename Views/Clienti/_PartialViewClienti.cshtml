@@ -44,9 +44,9 @@
             @Html.DisplayFor(modelItem => item.Cellulare)
         </td>
         <td>
-            @Html.ActionLink("Modifica", "Edit", new {  id=item.IdCliente }) |
-            @Html.ActionLink("Dettagli", "Details", new {  id=item.IdCliente }) |
-            @Html.ActionLink("Cancella", "Delete", new {  id=item.IdCliente  })
+            @Html.ActionLink("Modifica", "ModificaCliente", new {  id=item.IdCliente }) |
+            @Html.ActionLink("Dettagli", "DettagliCliente", new {  id=item.IdCliente }) |
+            @Html.ActionLink("Elimina", "EliminaCliente", new {  id=item.IdCliente  })
         </td>
     </tr>
 }
