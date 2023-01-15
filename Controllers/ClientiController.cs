@@ -17,7 +17,6 @@ namespace Hotel.Controllers
         }
         public ActionResult AggiungiCliente()
         {
-            ViewBag.ListaClienti = Clienti.ListaDrpdwnClienti;
             return View();
         }
         [HttpPost]

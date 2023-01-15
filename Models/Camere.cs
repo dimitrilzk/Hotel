@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace Hotel.Models
 {
@@ -14,5 +16,25 @@ namespace Hotel.Models
         public string Descrizione { get; set; }
         [Display(Name ="Seleziona per camera tripla - lascia vuoto per camera doppia")]
         public bool Tipologia { get; set; }
+        public static List<SelectListItem> ListaDrpdwnCamere
+        {
+            get
+            {
+                List<SelectListItem> lista = new List<SelectListItem>();
+                SqlConnection con = Connessione.GetConnection();
+                con.Open();
+                SqlDataReader reader = Connessione.GetReader("select * from camere", con);
+                while (reader.Read())
+                {
+                    SelectListItem item = new SelectListItem
+                    {
+                        Text = $"{reader["NumeroCamera"].ToString()} ({reader["Descrizione"].ToString()})",
+                        Value = reader["IdCamera"].ToString()
+                    };
+                    lista.Add(item);
+                }
+                return lista;
+            }
+        }
     }
 }

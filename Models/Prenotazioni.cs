@@ -30,7 +30,9 @@ namespace Hotel.Models
 
         [DataType(DataType.Currency)]
         public decimal Prezzo { get; set; }
+        [Display(Name ="Cliente")]
         public int IdCliente { get; set; }
+        [Display(Name = "Camera")]
         public int IdCamera { get; set; }
     }
 }

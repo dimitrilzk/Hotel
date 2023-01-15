@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hotel.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +12,8 @@ namespace Hotel.Controllers
         // GET: Prenotazioni
         public ActionResult AggiungiPrenotazione()
         {
+            ViewBag.ListaClienti = Clienti.ListaDrpdwnClienti;
+            ViewBag.ListaCamere = Camere.ListaDrpdwnCamere;
             return View();
         }
     }
