@@ -8,9 +8,11 @@ using System.Web.Mvc;
 
 namespace Hotel.Controllers
 {
+    [Authorize]
     public class CamereController : Controller
     {
         // GET: Camere
+        [AllowAnonymous]
         public ActionResult AggiungiCamera()
         {
             return View();

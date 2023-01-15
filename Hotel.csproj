@@ -123,6 +123,7 @@
     <Compile Include="Controllers\CamereController.cs" />
     <Compile Include="Controllers\ClientiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PrenotazioniController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -130,7 +131,9 @@
     <Compile Include="Models\Camere.cs" />
     <Compile Include="Models\Clienti.cs" />
     <Compile Include="Models\Connessione.cs" />
+    <Compile Include="Models\CustomRole.cs" />
     <Compile Include="Models\Prenotazioni.cs" />
+    <Compile Include="Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -212,6 +215,8 @@
     <Content Include="Views\Clienti\DettagliCliente.cshtml" />
     <Content Include="Views\Camere\AggiungiCamera.cshtml" />
     <Content Include="Views\Prenotazioni\AggiungiPrenotazione.cshtml" />
+    <Content Include="Views\Prenotazioni\_PartialViewPrenotazioniAndClienti.cshtml" />
+    <Content Include="Views\Login\SignIn.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

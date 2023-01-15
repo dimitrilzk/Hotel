@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Hotel.Models.Prenotazioni>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdPrenotazione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataPrenotazione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataInizioSoggiorno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataFineSoggiorno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodiceFiscale)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroCamera)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdPrenotazione)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataPrenotazione)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataInizioSoggiorno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataFineSoggiorno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodiceFiscale)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroCamera)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
