@@ -25,6 +25,7 @@ namespace Hotel.Controllers
         [HttpPost]
         public ActionResult AggiungiPrenotazione(Prenotazioni p)
         {
+
             SqlConnection con = Connessione.GetConnection();
             try
             {
